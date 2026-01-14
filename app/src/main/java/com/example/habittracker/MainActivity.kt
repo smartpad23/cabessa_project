@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habittracker.data.Habit
@@ -22,6 +23,7 @@ import com.example.habittracker.databinding.ActivityMainBinding
 import com.example.habittracker.databinding.DialogAddHabitBinding
 import com.example.habittracker.ui.HabitAdapter
 import com.example.habittracker.viewmodel.HabitViewModel
+import kotlinx.coroutines.launch
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -150,16 +152,20 @@ class MainActivity : AppCompatActivity() {
                     reminderHour = selectedHour,
                     reminderMinute = selectedMinute
                 )
-                viewModel.insert(habit)
                 
-                if (reminderEnabled) {
-                    scheduleReminder(habit)
+                // Insert habit and schedule reminder with the actual habit ID
+                lifecycleScope.launch {
+                    val habitId = viewModel.insert(habit)
+                    if (reminderEnabled) {
+                        val habitWithId = habit.copy(id = habitId)
+                        scheduleReminder(habitWithId)
+                    }
                 }
                 
                 Toast.makeText(this, R.string.habit_added, Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
             } else {
-                Toast.makeText(this, "Please enter a habit name", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.error_habit_name_required, Toast.LENGTH_SHORT).show()
             }
         }
         
@@ -225,7 +231,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.habit_updated, Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
             } else {
-                Toast.makeText(this, "Please enter a habit name", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.error_habit_name_required, Toast.LENGTH_SHORT).show()
             }
         }
         

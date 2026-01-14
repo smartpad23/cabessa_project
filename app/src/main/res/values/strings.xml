@@ -22,5 +22,5 @@
     <string name="pending">Pending</string>
     <string name="streak">Streak: %d days</string>
     <string name="last_completed">Last completed: %s</string>
-    <string name="never">Never</string>
+    <string name="error_habit_name_required">Please enter a habit name</string>
 </resources>

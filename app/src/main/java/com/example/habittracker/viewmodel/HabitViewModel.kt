@@ -21,8 +21,8 @@ class HabitViewModel(application: Application) : AndroidViewModel(application) {
         allHabits = repository.allHabits.asLiveData()
     }
     
-    fun insert(habit: Habit) = viewModelScope.launch {
-        repository.insert(habit)
+    suspend fun insert(habit: Habit): Long {
+        return repository.insert(habit)
     }
     
     fun update(habit: Habit) = viewModelScope.launch {
