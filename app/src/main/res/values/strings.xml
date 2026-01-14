@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Habit Tracker</string>
+    <string name="add_habit">Add Habit</string>
+    <string name="habit_name">Habit Name</string>
+    <string name="habit_description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="no_habits">No habits yet. Click + to add one!</string>
+    <string name="habit_added">Habit added successfully</string>
+    <string name="habit_updated">Habit updated successfully</string>
+    <string name="habit_deleted">Habit deleted</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="enable_reminder">Enable Reminder</string>
+    <string name="reminder_notification_title">Habit Reminder</string>
+    <string name="reminder_notification_text">Time to complete: %s</string>
+    <string name="mark_complete">Mark Complete</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="streak">Streak: %d days</string>
+    <string name="last_completed">Last completed: %s</string>
+    <string name="error_habit_name_required">Please enter a habit name</string>
+</resources>
