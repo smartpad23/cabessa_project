@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Cabessa</string>
+
+    <!-- ===== Generic strings ===== -->
+    <string name="accept">Accept</string>
+    <string name="apply_filters">Apply filters</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_delete">Confirm delete</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="filter_and_sort">Filter and sort</string>
+    <string name="filter_by_name">Filter and sort</string>
+    <string name="filter_in_stock">Filter in stock</string>
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="name">Name</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="sort_order">Sort order</string>
+    <string name="update">Save</string>
+
+    <!-- ===== Module names ===== -->
+    <string name="drug_module_name">Drugs</string>
+    <string name="lottery_module_name">Lottery</string>
+    <string name="money_module_name">Expenses</string>
+    <string name="notes_module_name">Notes</string>
+
+    <!-- ===== Drugs module string ===== -->
+    <string name="active_substance">Active substance</string>
+    <string name="brand">Brand</string>
+    <string name="doses">Doses</string>
+    <string name="drug">Drug</string>
+    <string name="drugs">Drugs</string>
+    <string name="drugs_stock">Stock</string>
+    <string name="screen_drug_title">Drugs List</string>
+    <string name="stats">Statistics</string>
+    <string name="stock">Stock</string>
+    <string name="treatments">Treatments</string>
+    <string name="unit">Unit</string>
+
+    <!-- ===== Expenses module string ===== -->
+    <string name="incomes">Incomes</string>
+    <string name="expenses">Expenses</string>
+    <string name="reports">Reports</string>
+
+</resources>
