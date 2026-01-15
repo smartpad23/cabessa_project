@@ -106,7 +106,8 @@ fun DrugListScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f)
-                        .padding(bottom = 8.dp)
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     items(drugs, key = { it.id }) { drug ->
                         DrugItemCard(

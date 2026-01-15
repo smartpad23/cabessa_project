@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cabessa</string>
 
@@ -26,7 +27,7 @@
     <string name="notes_module_name">Notes</string>
 
     <!-- ===== Drugs module string ===== -->
-    <string name="active_substance">Active substance</string>
+    <string name="active_substance">Substance</string>
     <string name="brand">Brand</string>
     <string name="doses">Doses</string>
     <string name="drug">Drug</string>
@@ -37,6 +38,26 @@
     <string name="stock">Stock</string>
     <string name="treatments">Treatments</string>
     <string name="unit">Unit</string>
+    <string name="comments">Comments</string>
+
+    <!-- Other -->
+    <string name="no_comments">No comments</string>
+
+    <!-- Format strings -->
+    <string name="per_box_format">%1$s per box</string>
+    <!-- stock_with_per_box_format: first %1$s = stock text, second %2$s = perBox formatted -->
+    <string name="stock_with_per_box_format">%1$s (%2$s)</string>
+
+    <!-- Unit suffixes (localized) -->
+    <string name="unit_units">units</string>
+    <string name="unit_mg">mg</string>
+    <string name="unit_ml">ml</string>
+
+    <!-- Formatting helpers that combine value and unit -->
+    <!-- unit_with_value_format: %1$s = numeric value, %2$s = unit suffix -->
+    <string name="unit_with_value_format">%1$s %2$s</string>
+    <!-- unit_uds_format: for units we want integer + suffix (value already formatted as string param) -->
+    <string name="unit_uds_format">%1$s %2$s</string>
 
     <!-- ===== Expenses module string ===== -->
     <string name="incomes">Incomes</string>

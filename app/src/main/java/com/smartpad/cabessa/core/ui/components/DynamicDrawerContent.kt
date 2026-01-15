@@ -1,19 +1,18 @@
 package com.smartpad.cabessa.core.ui.components
 
-import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Assignment
+import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Inventory2
-import androidx.compose.material.icons.filled.MedicalServices
 import androidx.compose.material.icons.filled.Medication
-import androidx.compose.material3.Divider
+import androidx.compose.material3.DividerDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.NavigationDrawerItem
@@ -22,7 +21,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -66,11 +67,11 @@ fun DynamicDrawerContent(
                 )
             )
 
-            Divider()
+            HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
             // Always show app Home
             NavigationDrawerItem(
-                label = { Text(stringResource(id = com.smartpad.cabessa.R.string.home)) },
+                label = { Text(stringResource(id = R.string.home)) },
                 selected = currentRoute == Routes.HOME,
                 onClick = { onNavigate(Routes.HOME) },
                 modifier = Modifier.padding(horizontal = 8.dp),
@@ -84,18 +85,18 @@ fun DynamicDrawerContent(
                 }
             )
 
-            Divider()
+            HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
             val items = listOf(
                 DrawerItem(
                     route = Routes.DRUGS_LIST,
                     label = stringResource(id = R.string.drug_module_name),
-                    icon = Icons.Default.MedicalServices
+                    icon = ImageVector.vectorResource(id = R.drawable.ic_drug)
                 ),
                 DrawerItem(
                     route = Routes.DRUGS_TREATMENTS,
                     label = stringResource(id = R.string.treatments),
-                    icon = Icons.Default.Assignment
+                    icon = Icons.AutoMirrored.Filled.Assignment
                 ),
                 DrawerItem(
                     route = Routes.DRUGS_STOCK,
